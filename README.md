@@ -1,6 +1,6 @@
-# 🎮 BloxRS - Port Nativo de Mapas do Roblox para R35S e PC
+# 🎮 BloxRS - Port Nativo de Mapas do Roblox para R35/36S e PC
 
-Suíte completa para portar, testar e jogar mapas clássicos do Roblox (era 2006 a 2008) nativamente no **PC (Windows)** e no console portátil **R35S** (ArkOS / PortMaster) em **640x480 a 60 FPS**.
+Suíte completa para portar, testar e jogar mapas clássicos do Roblox (era 2006 a 2008) nativamente no **PC (Windows)** e no console portátil **R35/36S**.
 
 ---
 
