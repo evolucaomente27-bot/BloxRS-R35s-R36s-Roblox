@@ -1,0 +1,10 @@
+* text=auto
+*.sh text eol=lf
+*.gptk text eol=lf
+*.rbxl binary
+*.pck binary
+*.squashfs binary
+*.exe binary
+*.zip binary
+*.png binary
+*.stex binary

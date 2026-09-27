@@ -1,0 +1,18 @@
+========================================================
+  BloxRS para R35S (ArkOS / PortMaster)
+========================================================
+
+COMO INSTALAR:
+1. Conecte o cartão SD do R35S no PC (TF2/EASYROMS).
+2. Extraia o conteúdo deste arquivo .ZIP direto na pasta:
+   roms/ports/  (ou roms2/ports/)
+
+A estrutura final deve ficar assim:
+roms/ports/BloxRS.sh
+roms/ports/bloxrs/bloxrs.pck
+roms/ports/bloxrs/frt_3.5.2.squashfs
+roms/ports/bloxrs/converter/
+roms/ports/bloxrs/maps/
+
+3. No R35S, vá até a aba PORTS e inicie o BloxRS!
+========================================================

@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/materials/stud_material.tres" type="Material" id=1]
+[ext_resource path="res://assets/materials/plastic_red.tres" type="Material" id=2]
+[ext_resource path="res://assets/materials/plastic_blue.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/plastic_yellow.tres" type="Material" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 100, 2, 100 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 50, 1, 50 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 6, 0.4, 6 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 3, 0.2, 3 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 4, 8, 4 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 2, 4, 2 )
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 2, 0.6, 6 )
+
+[node name="Baseplate" type="Spatial"]
+
+[node name="Floor" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 2 )
+
+[node name="SpawnLocation" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="SpawnLocation"]
+mesh = SubResource( 3 )
+material/0 = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SpawnLocation"]
+shape = SubResource( 4 )
+
+[node name="RedTower" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 4, -15 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RedTower"]
+mesh = SubResource( 5 )
+material/0 = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RedTower"]
+shape = SubResource( 6 )
+
+[node name="BlueTower" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 4, -15 )
+
+[node name="MeshInstance" type="MeshInstance" parent="BlueTower"]
+mesh = SubResource( 5 )
+material/0 = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="BlueTower"]
+shape = SubResource( 6 )
+
+[node name="YellowBlock" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -20 )
+
+[node name="MeshInstance" type="MeshInstance" parent="YellowBlock"]
+mesh = SubResource( 5 )
+material/0 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="YellowBlock"]
+shape = SubResource( 6 )
+
+[node name="Stairs1" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.3, -8 )
+
+[node name="Mesh" type="MeshInstance" parent="Stairs1"]
+mesh = SubResource( 7 )
+material/0 = ExtResource( 1 )
+
+[node name="Collision" type="CollisionShape" parent="Stairs1"]
+shape = SubResource( 4 )
+
+[node name="Stairs2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.9, -10 )
+
+[node name="Mesh" type="MeshInstance" parent="Stairs2"]
+mesh = SubResource( 7 )
+material/0 = ExtResource( 1 )
+
+[node name="Collision" type="CollisionShape" parent="Stairs2"]
+shape = SubResource( 4 )

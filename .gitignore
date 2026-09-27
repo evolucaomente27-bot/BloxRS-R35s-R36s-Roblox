@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+
+# Windows
+Thumbs.db
+[Dd]esktop.ini
+
+# OS
+.DS_Store
